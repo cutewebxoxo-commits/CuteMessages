@@ -1,0 +1,116 @@
+@font-face {
+    font-family: 'customFont'; /* Choose any name */
+    src: url('MochiBoomDEMO.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-family: 'customFont', sans-serif;
+
+    background-image: url(bg.png);
+    background-repeat: repeat;    
+    background-size: 50% auto;
+
+    user-select: none;
+
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .contentBox{
+        background-color: #c77dff;
+        border: 0.2rem #7b2cbf solid;
+        border-radius: 0.2rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        padding: 1rem;
+        
+        width: 80%;
+        max-height: 75%;
+
+        
+        #content{
+            
+            img{
+                width: 100%;
+                border-radius: 0.25rem;
+                border: 0.2rem #7b2cbf solid;    
+            }
+        }
+    }
+
+    .customButton{
+        border: 0.2rem #7b2cbf solid;
+        border-radius: 0.2rem;
+        background-color: #c77dff;
+        width: 50%;
+        height: 3rem;
+
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;          
+        transform: translateX(-50%);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+     .customButton:hover{
+        background-color: #7b2cbf;
+    }
+
+    #heading{
+        border: 0.2rem #7b2cbf solid;
+        border-radius: 0.2rem;
+        background-color: #c77dff;
+        width: 50%;
+        height: 3rem;
+
+        position: absolute;
+        top: 2rem;
+        left: 50%;          
+        transform: translateX(-50%);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+         
+    }
+    #headingKuromis{
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        img{
+            width: 20%;
+        }
+    }
+
+    .leftKuromi{
+        position: absolute;
+        
+       
+    }
+
+    .rightKuromi{
+        position: absolute;
+        right: 1rem;
+       
+        img{
+            width: 20%;
+        }
+    }
+
+    audio{
+        width: 100%;
+    }
+}
+
+   
+
