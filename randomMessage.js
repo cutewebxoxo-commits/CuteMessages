@@ -38,9 +38,9 @@ function randomContent() {
             //Photo
             var randomNum = getRandomInt(64);
             if(randomNum < 61)
-                contentDiv.innerHTML = `<img style="width:100%;" src="img_Video/${randomNum}.jpg" alt="Cutie Pie">`;
+                contentDiv.innerHTML = `<img style="width:100%;" src="img_video/${randomNum}.jpg" alt="Cutie Pie">`;
             else
-                contentDiv.innerHTML = `<video style="width:100%;" src="img_Video/${randomNum}.mp4"></video>`;
+                contentDiv.innerHTML = `<video style="width:100%;" src="img_video/${randomNum}.mp4"></video>`;
             console.log("2");
             break;
     
