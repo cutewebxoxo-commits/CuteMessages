@@ -1,4 +1,5 @@
 var fetchedContent = [];
+var numberAudio = 0;
 
 fetch("elinMessages.xml")
     .then(response => response.text())
@@ -31,7 +32,8 @@ function randomContent() {
             break;
         case 1:
             //Audio
-            contentDiv.innerHTML = `<audio controls "> <source src="audioFiles/${getRandomInt(29)}.m4a" type="audio/mp4">Your browser does not support the audio element.</audio>`
+            numberAudio = getRandomInt(29);
+            contentDiv.innerHTML = `<audio controls "> <source src="audioFiles/${numberAudio}.m4a" type="audio/mp4">Your browser does not support the audio element.</audio>`
             console.log("1");
             break;
         case 2:
@@ -51,6 +53,12 @@ function randomContent() {
 
     
 }
+
+document.querySelector("#playBtn").addEventListener("click", () => {
+  const audio = new Audio(`audioFiles/${numberAudio}.m4a`);
+  audio.play().catch(err => console.log("Playback blocked:", err));
+});
+
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * (max - 0 + 1)) + 0;
