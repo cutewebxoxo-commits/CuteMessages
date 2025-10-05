@@ -24,26 +24,29 @@ function randomContent() {
     contentDiv.innerHTML = "";
     const contentFetched = document.createElement("div");
 
+    // console.log(getRandomInt(fetchedContent.length));
+
     switch (getRandomInt(2)) {
         case 0:
             //Text
-            contentFetched.textContent = fetchedContent[getRandomInt(fetchedContent.length)].textContent;
+            var fetchedIndex = getRandomInt(fetchedContent.length)-1;
+            if(fetchedIndex < 0)
+                fetchedIndex = 0;
+            contentFetched.innerHTML = fetchedContent[fetchedIndex].innerHTML;
             contentDiv.appendChild(contentFetched);
             break;
         case 1:
             //Audio
             numberAudio = getRandomInt(29);
             contentDiv.innerHTML = `<audio controls "> <source src="audioFiles/${numberAudio}.m4a" type="audio/mp4">Your browser does not support the audio element.</audio>`
-            console.log("1");
             break;
         case 2:
             //Photo
             var randomNum = getRandomInt(64);
-            if(randomNum < 61)
+            if(randomNum <= 61)
                 contentDiv.innerHTML = `<img style="width:100%; max-height:75vh;" src="https://raw.githubusercontent.com/cutewebxoxo-commits/CuteMessages/refs/heads/main/img_Video/${randomNum}.JPG" alt="Cutie Pie">`;
             else
                 contentDiv.innerHTML = `<video style="width:100%; max-height:75vh;" src="https://raw.githubusercontent.com/cutewebxoxo-commits/CuteMessages/refs/heads/main/img_Video/${randomNum}.MP4"></video>`;
-            console.log("2");
             break;
     
         default:
