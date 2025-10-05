@@ -31,7 +31,7 @@ function randomContent() {
             break;
         case 1:
             //Audio
-            contentDiv.innerHTML = `<audio controls "> <source src="audioFiles/${getRandomInt(29)}.m4a" type="audio/mpeg">Your browser does not support the audio element.</audio>`
+            contentDiv.innerHTML = `<audio controls "> <source src="audioFiles/${getRandomInt(29)}.m4a" type="audio/mp4">Your browser does not support the audio element.</audio>`
             console.log("1");
             break;
         case 2:
