@@ -40,9 +40,9 @@ function randomContent() {
             //Photo
             var randomNum = getRandomInt(64);
             if(randomNum < 61)
-                contentDiv.innerHTML = `<img style="width:100%;" src="https://raw.githubusercontent.com/cutewebxoxo-commits/CuteMessages/refs/heads/main/img_Video/${randomNum}.JPG" alt="Cutie Pie">`;
+                contentDiv.innerHTML = `<img style="width:100%; max-height:75vh;" src="https://raw.githubusercontent.com/cutewebxoxo-commits/CuteMessages/refs/heads/main/img_Video/${randomNum}.JPG" alt="Cutie Pie">`;
             else
-                contentDiv.innerHTML = `<video style="width:100%;" src="https://raw.githubusercontent.com/cutewebxoxo-commits/CuteMessages/refs/heads/main/img_Video/${randomNum}.MP4"></video>`;
+                contentDiv.innerHTML = `<video style="width:100%; max-height:75vh;" src="https://raw.githubusercontent.com/cutewebxoxo-commits/CuteMessages/refs/heads/main/img_Video/${randomNum}.MP4"></video>`;
             console.log("2");
             break;
     
